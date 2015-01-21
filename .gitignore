@@ -17,6 +17,16 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# NuGet packages
+packages/
+
+# VS
+*.suo
+*.user
+*.cache
+bin/
+obj/
+
 # =========================
 # Operating System Files
 # =========================
