@@ -14,7 +14,7 @@ namespace EPiServer.MvcAreas
         public void Initialize(InitializationEngine context)
         {
             GlobalFilters.Filters.Add(ServiceLocator.Current.GetInstance<DetectAreaAttribute>());
-            ContentRoute.RoutingContent = OnRoutingContent;
+            ContentRoute.RoutingContent += OnRoutingContent;
         }
 
         public void Uninitialize(InitializationEngine context)
@@ -28,9 +28,7 @@ namespace EPiServer.MvcAreas
         private void OnRoutingContent(object sender, RoutingEventArgs e)
         {
             PartialViewsInAreasRegistrar.Register(new HttpContextWrapper(HttpContext.Current));
-
-            // TODO: review is this safe
-            ContentRoute.RoutingContent = null;
+            ContentRoute.RoutingContent -= OnRoutingContent;
         }
     }
 }
