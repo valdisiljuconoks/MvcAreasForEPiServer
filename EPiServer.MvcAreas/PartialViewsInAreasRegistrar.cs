@@ -89,11 +89,10 @@ namespace EPiServer.MvcAreas
                     TemplateTypeCategory = TemplateTypeCategories.MvcPartialView
                 };
 
-                var view = partialView.View as RazorView;
+                var view = partialView.View as BuildManagerCompiledView;
                 if (view != null)
                 {
-                    // TODO: review this. most probably needed for cross-area block template support
-                    //templateModel.Path = view.ViewPath;
+                    templateModel.Path = view.ViewPath;
                 }
 
                 _templateModelRepository.RegisterTemplate(contentType, templateModel);
