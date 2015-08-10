@@ -167,6 +167,7 @@
     <Compile Include="DetectAreaAttribute.cs" />
     <Compile Include="PartialViewsInAreasRegistrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwitchToAreaAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
