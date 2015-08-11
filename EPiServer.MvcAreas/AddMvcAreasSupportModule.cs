@@ -8,22 +8,25 @@ using InitializationModule = EPiServer.Web.InitializationModule;
 
 namespace EPiServer.MvcAreas
 {
-    [ModuleDependency(typeof(InitializationModule))]
+    [ModuleDependency(typeof (InitializationModule))]
     public class AddMvcAreasSupportModule : IInitializableModule
     {
         public void Initialize(InitializationEngine context)
         {
-            GlobalFilters.Filters.Add(ServiceLocator.Current.GetInstance<DetectAreaAttribute>());
+            if (AreaConfiguration.Settings.EnableAreaDetectionByController)
+            {
+                GlobalFilters.Filters.Add(ServiceLocator.Current.GetInstance<DetectAreaAttribute>());
+            }
+
+            if (AreaConfiguration.Settings.EnableAreaDetectionBySite)
+            {
+                GlobalFilters.Filters.Add(ServiceLocator.Current.GetInstance<SwitchToAreaAttribute>());
+            }
+
             ContentRoute.RoutingContent += OnRoutingContent;
         }
 
-        public void Uninitialize(InitializationEngine context)
-        {
-        }
-
-        public void Preload(string[] parameters)
-        {
-        }
+        public void Uninitialize(InitializationEngine context) {}
 
         private void OnRoutingContent(object sender, RoutingEventArgs e)
         {

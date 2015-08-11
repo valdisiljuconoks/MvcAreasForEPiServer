@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/valdisiljuconoks/EPiServer.MvcAreas</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release of the library.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>EPiServer Asp.Net Mvc Areas CMS CMS8</tags>
+  </metadata>
+</package>
