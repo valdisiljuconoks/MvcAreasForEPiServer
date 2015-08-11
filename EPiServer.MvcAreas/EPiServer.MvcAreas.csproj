@@ -173,6 +173,9 @@
     <Compile Include="TypeAttributeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\README.md">
+      <Link>README.md</Link>
+    </None>
     <None Include="app.config" />
     <None Include="EPiServer.MvcAreas.nuspec" />
     <None Include="packages.config" />
