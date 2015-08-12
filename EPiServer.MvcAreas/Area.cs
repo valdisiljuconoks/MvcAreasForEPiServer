@@ -1,6 +1,6 @@
 using System;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class Area
     {

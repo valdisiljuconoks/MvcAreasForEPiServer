@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class AreaCollection : Collection<Area>
     {

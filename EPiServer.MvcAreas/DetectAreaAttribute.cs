@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class DetectAreaAttribute : ActionFilterAttribute
     {

@@ -8,7 +8,7 @@ using EPiServer.Framework.Web;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class PartialViewsInAreasRegistrar
     {

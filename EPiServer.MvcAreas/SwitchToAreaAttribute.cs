@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using EPiServer.Web;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class SwitchToAreaAttribute : ActionFilterAttribute
     {

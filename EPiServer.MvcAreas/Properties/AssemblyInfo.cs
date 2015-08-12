@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("EPiServer.MvcAreas")]
+[assembly: AssemblyTitle("MvcAreasForEPiServer")]
 [assembly: AssemblyDescription("Asp.Net Mvc Areas support for EPiServer CMS platform")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tech Fellow Consulting")]
-[assembly: AssemblyProduct("EPiServer.MvcAreas")]
+[assembly: AssemblyProduct("MvcAreasForEPiServer")]
 [assembly: AssemblyCopyright("Copyright © 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

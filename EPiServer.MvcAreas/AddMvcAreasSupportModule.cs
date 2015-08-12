@@ -6,7 +6,7 @@ using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
 using InitializationModule = EPiServer.Web.InitializationModule;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     [ModuleDependency(typeof (InitializationModule))]
     public class AddMvcAreasSupportModule : IInitializableModule

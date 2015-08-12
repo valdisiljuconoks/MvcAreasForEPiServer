@@ -1,4 +1,4 @@
-﻿namespace EPiServer.MvcAreas
+﻿namespace MvcAreasForEPiServer
 {
     public class AreaConfigurationSettings
     {

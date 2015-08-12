@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class TypeAttributeHelper
     {

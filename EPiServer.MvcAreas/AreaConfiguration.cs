@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class AreaConfiguration
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace EPiServer.MvcAreas
+namespace MvcAreasForEPiServer
 {
     public class AreaTable
     {

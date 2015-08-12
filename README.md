@@ -1,10 +1,10 @@
-# EPiServer.MvcAreas
+# Asp.Net Mvc Areas for EPiServer
 Add Asp.Net Mvc areas support for EPiServer project
 
 ## Getting Started
 
 ```
-PM> Install-Package EPiServer.MvcAreas
+PM> Install-Package MvcAreasForEPiServer
 ```
 
 By default configuration setting to detect Mvc Area by controller will be enabled.
