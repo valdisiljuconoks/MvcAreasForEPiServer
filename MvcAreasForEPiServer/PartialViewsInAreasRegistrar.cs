@@ -77,7 +77,17 @@ namespace MvcAreasForEPiServer
                     continue;
                 }
 
-                var partialView = _viewEngineWrapper.FindPartialView(controllerContext, contentType.Name);
+                // NOTE: this line in Release Mode was scanning only first area.
+                // If there were more than one area and requested block would be located
+                // in 2nd or any other area, EPiServer would add this template to noHit
+                // cache and would assume that view does not exist at all.
+
+                //  Replaced with view search directly via ViewEngines collection.
+                // If this hits performance - we would need to search for another solution here.
+
+                // var partialView = _viewEngineWrapper.FindPartialView(controllerContext, contentType.Name);
+                var partialView = ViewEngines.Engines.FindPartialView(controllerContext, contentType.Name);
+
                 if (partialView.View == null)
                 {
                     continue;
