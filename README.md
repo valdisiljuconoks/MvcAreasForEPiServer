@@ -54,6 +54,7 @@ There are two configuration settings:
 * `EnableAreaDetectionBySite`: this setting will make sure that Mvc Area is detected when accessing EPiServer site that is also defined as Mvc Area;
 
 
-More info: [here](http://tech-fellow.net/2015/01/22/full-support-asp-net-mvc-areas-episerver-7-5/)
-<br/>
-More info about using Mvc Areas as EPiServer's site discriminators [here](http://blog.tech-fellow.net/2015/08/10/asp-net-mvc-areas-in-episerver-part-2/)
+## More info
+[General description](http://blog.tech-fellow.net/2015/01/21/full-support-for-asp-net-mvc-areas-in-episerver-7-5/)<br/>
+How to use Mvc Areas as [EPiServer's](http://episerver.com) [site discriminators](http://blog.tech-fellow.net/2015/08/10/asp-net-mvc-areas-in-episerver-part-2/)<br/>
+Asp.Net Mvc Area support in EPiServer - [part 2](http://blog.tech-fellow.net/2015/08/10/asp-net-mvc-areas-in-episerver-part-2/)
