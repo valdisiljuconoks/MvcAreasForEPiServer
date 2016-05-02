@@ -7,6 +7,21 @@ Add Asp.Net Mvc areas support for EPiServer project
 PM> Install-Package MvcAreasForEPiServer
 ```
 
+After you installed this NuGet package, you will need to kick off area registration (usually this could be done in `Global.asax.cs`)
+
+```
+namespace MyProject
+{
+    public class Global : HttpApplication
+    {
+        protected void Application_Start()
+        {
+            AreaConfiguration.RegisterAllAreas();
+        }
+    }
+}
+```
+
 By default configuration setting to detect Mvc Area by controller will be enabled.
 
 ## Configuration
