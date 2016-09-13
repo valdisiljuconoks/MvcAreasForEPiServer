@@ -1,16 +1,18 @@
-<?xml version="1.0"?>
-<package >
+<?xml version="1.0" ?>
+
+<package>
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>https://github.com/valdisiljuconoks/EPiServer.MvcAreas</projectUrl>
+    <licenseUrl>https://github.com/valdisiljuconoks/MvcAreasForEPiServer/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/valdisiljuconoks/MvcAreasForEPiServer</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release of the library.</releaseNotes>
-    <copyright>Copyright 2015</copyright>
-    <tags>EPiServer Asp.Net Mvc Areas CMS CMS8</tags>
+    <copyright>Copyright 2016</copyright>
+    <tags>EPiServer Asp.Net Mvc Areas MvcAreas FeatureFolders FeatureAreas CMS</tags>
   </metadata>
 </package>
