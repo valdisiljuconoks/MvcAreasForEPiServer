@@ -14,5 +14,8 @@
     <releaseNotes>Initial release of the library.</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>EPiServer Asp.Net Mvc Areas MvcAreas FeatureFolders FeatureAreas CMS</tags>
+    <dependencies>
+      <dependency id="EPiServer.CMS.Core" version="[9.0.0, 10.0.0)" />
+    </dependencies>
   </metadata>
 </package>
