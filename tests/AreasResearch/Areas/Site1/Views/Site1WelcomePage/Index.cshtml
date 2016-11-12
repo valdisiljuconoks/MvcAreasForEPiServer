@@ -1,0 +1,19 @@
+﻿@using EPiServer.Web.Mvc.Html
+@using FeatureSwitch
+@model AreasResearch.Areas.Site1.Models.Site1WelcomePage
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Site1 Welcome Page</h2>
+
+SampleSiteFeature: @(FeatureContext.IsEnabled<SampleSiteFeature>())<br/>
+
+AuthorizedFeature: @(FeatureContext.IsEnabled<AuthorizedFeature>())<br />
+
+Roles: @(string.Join(", ", Roles.GetRolesForUser()))<br />
+
+<section>
+    @Html.PropertyFor(m => m.MainContentArea)
+</section>
