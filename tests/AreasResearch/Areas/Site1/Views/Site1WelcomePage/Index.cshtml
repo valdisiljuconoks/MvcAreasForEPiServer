@@ -10,8 +10,6 @@
 
 SampleSiteFeature: @(FeatureContext.IsEnabled<SampleSiteFeature>())<br/>
 
-AuthorizedFeature: @(FeatureContext.IsEnabled<AuthorizedFeature>())<br />
-
 Roles: @(string.Join(", ", Roles.GetRolesForUser()))<br />
 
 <section>

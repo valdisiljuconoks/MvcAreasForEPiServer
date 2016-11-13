@@ -393,6 +393,10 @@
     <Folder Include="Areas\Area3\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\EPiServerDB_c7bd1f24.mdf" />
+    <Content Include="App_Data\EPiServerDB_c7bd1f24_log.ldf">
+      <DependentUpon>EPiServerDB_c7bd1f24.mdf</DependentUpon>
+    </Content>
     <Content Include="ClientResources\Images\icons\layoutIcons24x24.png" />
     <Content Include="ClientResources\Scripts\Editors\StringList.js" />
     <Content Include="ClientResources\Styles\LayoutIcons.css" />
