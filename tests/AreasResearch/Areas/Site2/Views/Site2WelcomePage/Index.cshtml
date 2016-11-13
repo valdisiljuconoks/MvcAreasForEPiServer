@@ -1,5 +1,4 @@
 ﻿@using EPiServer.Web.Mvc.Html
-@using FeatureSwitch
 @model AreasResearch.Areas.Site2.Models.Site2WelcomePage
 
 @{
@@ -7,8 +6,6 @@
 }
 
 <h2>Site2 WelcomePage</h2>
-
-SampleSiteFeature: @(FeatureContext.IsEnabled<SampleSiteFeature>())
 
 <section>
     @Html.PropertyFor(m => m.MainContentArea)
