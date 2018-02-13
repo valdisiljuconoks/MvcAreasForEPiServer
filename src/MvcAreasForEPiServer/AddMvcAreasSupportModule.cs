@@ -1,10 +1,9 @@
-using System.Web;
-using System.Web.Mvc;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
-using InitializationModule = EPiServer.Web.InitializationModule;
+using System.Web;
+using System.Web.Mvc;
 
 namespace MvcAreasForEPiServer
 {
@@ -13,12 +12,12 @@ namespace MvcAreasForEPiServer
     {
         public void Initialize(InitializationEngine context)
         {
-            if(AreaConfiguration.Settings.EnableAreaDetectionByController)
+            if (AreaConfiguration.Settings.EnableAreaDetectionByController)
             {
                 GlobalFilters.Filters.Add(ServiceLocator.Current.GetInstance<DetectAreaAttribute>());
             }
 
-            if(AreaConfiguration.Settings.EnableAreaDetectionBySite)
+            if (AreaConfiguration.Settings.EnableAreaDetectionBySite)
             {
                 GlobalFilters.Filters.Add(ServiceLocator.Current.GetInstance<SwitchToAreaAttribute>());
             }
