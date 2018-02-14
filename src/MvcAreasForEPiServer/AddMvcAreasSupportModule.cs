@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MvcAreasForEPiServer
 {
-    [ModuleDependency(typeof(InitializationModule))]
+    [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
     public class AddMvcAreasSupportModule : IInitializableModule
     {
         public void Initialize(InitializationEngine context)
