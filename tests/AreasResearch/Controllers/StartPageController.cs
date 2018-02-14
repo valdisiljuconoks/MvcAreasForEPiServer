@@ -26,7 +26,7 @@ namespace AreasResearch.Controllers
                 editHints.AddConnection(m => m.Layout.CustomerZonePages, p => p.CustomerZonePageLinks);
             }
 
-            var repo = ServiceLocator.Current.GetInstance<TemplateModelRepository>();
+            var repo = ServiceLocator.Current.GetInstance<ITemplateRepository>();
             var templates = repo.List(typeof (GenericBlock));
 
             return View(model);
