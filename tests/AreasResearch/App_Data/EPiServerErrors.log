@@ -1,0 +1,13 @@
+﻿2018-02-14 18:39:50,436 [1] ERROR EPiServer.Framework.Initialization.InitializationEngine: Initialize action failed for Initialize on class EPiServer.Data.DataInitialization, EPiServer.Data, Version=8.8.0.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7
+System.NotSupportedException: The assemblies has not been updated to work with the current database version for database 'EPiServerDB'. Current database version is '7037.0', but the assemblies only supports '7019.0'.
+   at EPiServer.Data.SchemaUpdates.DatabaseSchemaManagerImplementation.ThrowUpdateCodeException(Version databaseVersion, Version codeVersion, String connectionStringName)
+   at EPiServer.Data.SchemaUpdates.DatabaseSchemaManagerImplementation.EnureDatabaseSchemaVersion(ConnectionStringsSection connectionStrings, Boolean automaticSchemaUpdatesEnabled)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()
+System.NotSupportedException: The assemblies has not been updated to work with the current database version for database 'EPiServerDB'. Current database version is '7037.0', but the assemblies only supports '7019.0'.
+   at EPiServer.Data.SchemaUpdates.DatabaseSchemaManagerImplementation.ThrowUpdateCodeException(Version databaseVersion, Version codeVersion, String connectionStringName)
+   at EPiServer.Data.SchemaUpdates.DatabaseSchemaManagerImplementation.EnureDatabaseSchemaVersion(ConnectionStringsSection connectionStrings, Boolean automaticSchemaUpdatesEnabled)
+   at EPiServer.Data.DataInitialization.Initialize(InitializationEngine context)
+   at EPiServer.Framework.Initialization.ModuleNode.Execute(Action a, String key)
+   at EPiServer.Framework.Initialization.InitializationEngine.InitializeModules()

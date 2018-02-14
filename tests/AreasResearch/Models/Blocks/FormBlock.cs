@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using EPiServer.XForms;
 
 namespace AreasResearch.Models.Blocks
 {
@@ -19,11 +18,5 @@ namespace AreasResearch.Models.Blocks
             Order = 1)]
         [CultureSpecific]
         public virtual string Heading { get; set; }
-
-        [Display(
-            GroupName = SystemTabNames.Content,
-            Order = 2)]
-        [CultureSpecific]
-        public virtual XForm Form { get; set; }
     }
 }

@@ -63,11 +63,5 @@ namespace AreasResearch.Models.Properties
 
             }
         }
-
-        public override IPropertyControl CreatePropertyControl()
-        {
-            //No support for legacy edit mode
-            return null;
-        }
     }
 }

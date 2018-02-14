@@ -1,12 +1,10 @@
 using System.Web.Mvc;
+using AreasResearch.Business.Rendering;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
-using AreasResearch.Business.Rendering;
-using AreasResearch.Helpers;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
-using StructureMap;
 
 namespace AreasResearch.Business.Initialization
 {
@@ -16,30 +14,14 @@ namespace AreasResearch.Business.Initialization
     {
         public void ConfigureContainer(ServiceConfigurationContext context)
         {
-            context.Container.Configure(ConfigureContainer);
+            context.Services.AddTransient<IContentRenderer, ErrorHandlingContentRenderer>();
+            context.Services.AddTransient<ContentAreaRenderer, AlloyContentAreaRenderer>();
 
-            DependencyResolver.SetResolver(new StructureMapDependencyResolver(context.Container));
+            DependencyResolver.SetResolver(new StructureMapDependencyResolver(context.StructureMap()));
         }
 
-        private static void ConfigureContainer(ConfigurationExpression container)
-        {
-            //Swap out the default ContentRenderer for our custom
-            container.For<IContentRenderer>().Use<ErrorHandlingContentRenderer>();
-            container.For<ContentAreaRenderer>().Use<AlloyContentAreaRenderer>();
+        public void Initialize(InitializationEngine context) { }
 
-            //Implementations for custom interfaces can be registered here.
-        }
-
-        public void Initialize(InitializationEngine context)
-        {
-        }
-
-        public void Uninitialize(InitializationEngine context)
-        {
-        }
-
-        public void Preload(string[] parameters)
-        {
-        }
+        public void Uninitialize(InitializationEngine context) { }
     }
 }
