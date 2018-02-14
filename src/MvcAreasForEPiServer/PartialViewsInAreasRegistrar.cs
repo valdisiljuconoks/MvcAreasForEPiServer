@@ -15,12 +15,12 @@ namespace MvcAreasForEPiServer
         private static volatile bool _isInitialized;
         private static readonly object _lockObj = new object();
         private readonly IContentTypeModelScanner _contentTypeModelScanner;
-        private readonly TemplateModelRepository _templateModelRepository;
+        private readonly ITemplateRepository _templateModelRepository;
         private readonly CachingViewEnginesWrapper _viewEngineWrapper;
 
         public PartialViewsInAreasRegistrar(
             IContentTypeModelScanner contentTypeModelScanner,
-            TemplateModelRepository templateModelRepository,
+            ITemplateRepository templateModelRepository,
             CachingViewEnginesWrapper viewEngineWrapper)
         {
             _contentTypeModelScanner = contentTypeModelScanner;
@@ -44,7 +44,7 @@ namespace MvcAreasForEPiServer
             }
         }
 
-        public void RegisterPartials(HttpContextBase context)
+        private void RegisterPartials(HttpContextBase context)
         {
             var controllerContext = new ControllerContext
             {
@@ -105,7 +105,7 @@ namespace MvcAreasForEPiServer
                     templateModel.Path = view.ViewPath;
                 }
 
-                _templateModelRepository.RegisterTemplate(contentType, templateModel);
+                _templateModelRepository.AddTemplates(contentType, templateModel);
 
                 partialView.ViewEngine.ReleaseView(controllerContext, partialView.View);
             }

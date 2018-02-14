@@ -1,5 +1,4 @@
 ﻿@using EPiServer.Web.Mvc.Html
-@using FeatureSwitch
 @model AreasResearch.Areas.Site1.Models.Site1WelcomePage
 
 @{
@@ -7,8 +6,6 @@
 }
 
 <h2>Site1 Welcome Page</h2>
-
-SampleSiteFeature: @(FeatureContext.IsEnabled<SampleSiteFeature>())<br/>
 
 Roles: @(string.Join(", ", Roles.GetRolesForUser()))<br />
 

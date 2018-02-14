@@ -8,7 +8,6 @@ using EPiServer.DataAbstraction;
 using EPiServer.Security;
 using AreasResearch.Models.ViewModels;
 using EPiServer.Web.Mvc;
-using EPiServer.XForms;
 
 namespace AreasResearch.Business.Rendering
 {
@@ -86,14 +85,6 @@ namespace AreasResearch.Business.Rendering
                 HandlerError(helper, contentData, ex);
             }
             catch (EPiServerException ex)
-            {
-                if (HttpContext.Current.IsDebuggingEnabled)
-                {
-                    throw;
-                }
-                HandlerError(helper, contentData, ex);
-            }
-            catch (XFormException ex)
             {
                 if (HttpContext.Current.IsDebuggingEnabled)
                 {
