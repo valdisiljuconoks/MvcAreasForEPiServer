@@ -6,28 +6,18 @@ namespace MvcAreasForEPiServer
 {
     public class AreaTable
     {
-        private static readonly AreaCollection _instance = new AreaCollection();
         private static readonly Dictionary<string, string> _controllersMap = new Dictionary<string, string>();
-        public static AreaCollection Areas
-        {
-            get
-            {
-                return _instance;
-            }
-        }
+        public static AreaCollection Areas { get; } = new AreaCollection();
 
         public static string GetAreaForController(string controllerName)
         {
-            string value;
-            return _controllersMap.TryGetValue(controllerName, out value) ? value : null;
+            return _controllersMap.TryGetValue(controllerName, out var value) ? value : null;
         }
 
         internal static AreaRegistration AddArea(Type area)
         {
             if (area == null)
-            {
-                throw new ArgumentNullException("area");
-            }
+                throw new ArgumentNullException(nameof(area));
 
             var areaRegistration = (AreaRegistration)Activator.CreateInstance(area);
             Areas.Add(new Area(areaRegistration.AreaName));
@@ -38,9 +28,7 @@ namespace MvcAreasForEPiServer
         internal static void RegisterController(string controllerName, string areaName)
         {
             if (!_controllersMap.ContainsKey(controllerName))
-            {
                 _controllersMap.Add(controllerName, areaName);
-            }
         }
     }
 }

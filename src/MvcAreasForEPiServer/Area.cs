@@ -7,13 +7,11 @@ namespace MvcAreasForEPiServer
         public Area(string name)
         {
             if (string.IsNullOrEmpty(name))
-            {
-                throw new ArgumentNullException("name");
-            }
+                throw new ArgumentNullException(nameof(name));
 
             Name = name;
         }
 
-        public string Name { get; private set; }
+        public string Name { get; }
     }
 }
